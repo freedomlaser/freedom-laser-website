@@ -7,6 +7,8 @@
 
   <title>Freedom Laser — Quit Smoking Now</title>
 
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
   <!-- Theme stylesheet (default = Theme #2: ZIP-modern) -->
   <link id="themeStylesheet" rel="stylesheet" href="css/theme-zip-modern.css" />
 </head>
@@ -19,36 +21,14 @@
 
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#expect">What to Expect</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-primary" data-bind-href="tel" aria-label="Call Freedom Laser">
-          Call <span data-bind="phoneDisplay"></span>
+        <a class="btn btn-primary header-phone" data-bind-href="tel" aria-label="Call Freedom Laser">
+          <span data-bind="phoneDisplay"></span>
         </a>
-
-        <form class="theme-switcher" aria-label="Theme switcher">
-          <fieldset class="theme-fieldset">
-            <legend class="sr-only">Theme</legend>
-
-            <label class="theme-option">
-              <input type="radio" name="theme" value="zip-modern" checked />
-              <span>Modern</span>
-            </label>
-
-            <label class="theme-option">
-              <input type="radio" name="theme" value="card" />
-              <span>Card</span>
-            </label>
-
-            <label class="theme-option">
-              <input type="radio" name="theme" value="ontario" />
-              <span>Ontario</span>
-            </label>
-          </fieldset>
-        </form>
       </div>
     </div>
   </header>
@@ -57,7 +37,6 @@
     <section class="section hero" aria-labelledby="hero-title">
       <div class="container hero-inner">
         <div class="hero-content">
-          <p class="kicker">By appointment only.</p>
           <h1 id="hero-title">Quit Smoking Now!</h1>
           <p class="hero-lede">A simple, non-invasive session designed to support your quit day.</p>
 
@@ -69,44 +48,21 @@
 
           <div class="hero-ctas">
             <a class="btn btn-primary" data-bind-href="tel" aria-label="Call to book an appointment">
-              Call <span data-bind="phoneDisplay"></span>
+              Call Now
             </a>
-            <a class="btn btn-ghost" href="#contact">Contact Us</a>
           </div>
 
-          <p class="fineprint">
-            Results vary. This service is not a substitute for medical care. If you have health concerns, talk with a licensed healthcare professional.
-          </p>
         </div>
 
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-visual-card">
-            <svg viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg" class="hero-visual-svg" role="img" aria-label="Abstract laser beams">
-              <defs>
-                <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0" stop-color="currentColor" stop-opacity="0" />
-                  <stop offset="0.4" stop-color="currentColor" stop-opacity="0.55" />
-                  <stop offset="1" stop-color="currentColor" stop-opacity="0" />
-                </linearGradient>
-                <radialGradient id="burst" cx="80%" cy="25%" r="55%">
-                  <stop offset="0" stop-color="currentColor" stop-opacity="0.55" />
-                  <stop offset="0.45" stop-color="currentColor" stop-opacity="0.18" />
-                  <stop offset="1" stop-color="currentColor" stop-opacity="0" />
-                </radialGradient>
-              </defs>
-
-              <rect x="0" y="0" width="520" height="360" rx="26" fill="url(#burst)" />
-
-              <g stroke="url(#beam)" stroke-width="7" stroke-linecap="round" opacity="0.9">
-                <path d="M40 290 C180 180, 300 150, 480 90" />
-                <path d="M30 230 C190 140, 310 120, 490 60" />
-                <path d="M60 330 C190 220, 320 190, 470 120" />
-              </g>
-
-              <circle cx="422" cy="86" r="10" fill="currentColor" opacity="0.55" />
-              <circle cx="422" cy="86" r="28" fill="currentColor" opacity="0.12" />
-              <rect x="22" y="22" width="476" height="316" rx="22" fill="none" stroke="currentColor" opacity="0.18" />
-            </svg>
+            <img
+              src="assets/quit_smoking_img.png"
+              alt=""
+              class="hero-visual-img"
+              width="320"
+              height="440"
+            />
           </div>
         </div>
       </div>
@@ -118,80 +74,24 @@
 
         <div class="prose">
           <p>
-            Freedom Laser provides <strong>low-level laser therapy</strong> (LLLT) sessions applied to points commonly used in acupuncture.
-            The goal is to support the body’s natural endorphin response and help reduce cravings and withdrawal discomfort as you quit nicotine.
+            <strong>Low-level laser therapy</strong> (LLLT) applied to acupuncture points to support your body's natural endorphin response — helping reduce cravings and withdrawal discomfort.
           </p>
           <p>
-            Many people choose this approach because it’s painless and non-invasive, and appointments are quick.
-            We’ll talk through your goals, your current habits, and what support looks like after your visit.
-          </p>
-          <p>
-            We also offer appetite suppression support for clients who want help managing hunger while they change routines.
-            Ask about options when you book.
+            Painless, non-invasive, and quick. Appetite suppression included at no extra charge.
           </p>
         </div>
 
         <div class="feature-grid" role="list">
           <div class="card" role="listitem">
             <h3 class="card-title">Non-invasive</h3>
-            <p class="card-text">No needles. A calm, comfortable visit.</p>
-          </div>
-          <div class="card" role="listitem">
-            <h3 class="card-title">Focused session</h3>
-            <p class="card-text">Plan for roughly <strong>45 minutes</strong> from start to finish.</p>
+            <p class="card-text">The laser is painless — no needles, no discomfort.</p>
           </div>
           <div class="card" role="listitem">
             <h3 class="card-title">Appointment-based</h3>
-            <p class="card-text">We operate by appointment only, including weeknights and weekends.</p>
+            <p class="card-text">By appointment only — ~45 minutes, weeknights and weekends available.</p>
+            <p class="card-text muted">Cash and credit card accepted.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="expect" aria-labelledby="expect-title">
-      <div class="container">
-        <h2 id="expect-title">What to Expect</h2>
-
-        <ol class="steps" aria-label="What to expect">
-          <li class="step">
-            <h3 class="step-title">Book</h3>
-            <p class="step-text">Call or email to choose a time that fits your schedule. We’ll confirm pricing and answer questions.</p>
-          </li>
-          <li class="step">
-            <h3 class="step-title">Visit</h3>
-            <p class="step-text">Your session is painless and non-invasive. Plan for about 45 minutes for intake + treatment.</p>
-          </li>
-          <li class="step">
-            <h3 class="step-title">Follow-up</h3>
-            <p class="step-text">We’ll share next-step guidance and can discuss optional follow-up support if you need it.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section" id="pricing" aria-labelledby="pricing-title">
-      <div class="container">
-        <h2 id="pricing-title">Pricing</h2>
-
-        <div class="pricing">
-          <div class="pricing-card">
-            <div class="price-row">
-              <div>
-                <p class="price-label">Quit Smoking Session</p>
-                <p class="price-note">By appointment only • Confirm details when booking</p>
-              </div>
-              <p class="price" data-bind="prices.quitSmoking">$[SESSION PRICE]</p>
-            </div>
-            <ul class="pricing-meta">
-              <li>Session length: ~45 minutes</li>
-              <li>Payment: cash and credit card</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="fineprint">
-          Want appetite suppression support? Ask during booking. If a separate fee applies, it will be confirmed ahead of your appointment.
-        </p>
       </div>
     </section>
 
@@ -224,7 +124,7 @@
           <details class="faq-item">
             <summary>Can it help with appetite suppression?</summary>
             <div class="faq-panel">
-              <p>Many clients ask about appetite support while changing routines. Ask us about options when you book.</p>
+              <p>Yes – Many clients ask about appetite support while changing routines.</p>
             </div>
           </details>
 
@@ -257,9 +157,6 @@
           </details>
         </div>
 
-        <p class="fineprint">
-          If you have a medical condition, are pregnant, or are under a physician’s care, consult your healthcare professional before making changes to nicotine use.
-        </p>
       </div>
     </section>
 
@@ -282,17 +179,11 @@
             <h3 class="card-title">Email</h3>
             <p class="card-text">
               <a class="link" data-bind-href="mailto" aria-label="Email Freedom Laser">
-                <span data-bind="email">contact@YOURDOMAIN.ca</span>
+                <span data-bind="email">hello@freedom-laser.ca</span>
               </a>
             </p>
-            <p class="card-text muted">We typically respond within business hours.</p>
           </div>
 
-          <div class="card">
-            <h3 class="card-title">Address</h3>
-            <p class="card-text" data-bind="address">[ADDRESS HERE]</p>
-            <p class="card-text muted">By appointment only.</p>
-          </div>
         </div>
       </div>
     </section>
@@ -301,12 +192,41 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p class="footer-line">© <span data-bind="currentYear"></span> Freedom Laser</p>
-      <p class="footer-disclaimer">
-        Disclaimer: Content on this site is for general information only and does not constitute medical advice.
-        Individual results vary.
-      </p>
     </div>
   </footer>
+
+  <!-- Floating theme widget -->
+  <div class="theme-widget">
+    <button
+      class="theme-widget-toggle"
+      aria-label="Theme settings"
+      aria-expanded="false"
+      aria-controls="theme-widget-panel"
+      type="button"
+    >
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+      </svg>
+    </button>
+    <div class="theme-widget-panel" id="theme-widget-panel" role="group" aria-label="Theme switcher">
+      <fieldset class="theme-widget-fieldset">
+        <legend class="sr-only">Theme</legend>
+        <label class="theme-widget-option">
+          <input type="radio" name="theme" value="zip-modern" checked />
+          <span>Modern</span>
+        </label>
+        <label class="theme-widget-option">
+          <input type="radio" name="theme" value="card" />
+          <span>Dark</span>
+        </label>
+        <label class="theme-widget-option">
+          <input type="radio" name="theme" value="ontario" />
+          <span>Ontario</span>
+        </label>
+      </fieldset>
+    </div>
+  </div>
 
   <!-- Config + tiny vanilla JS (no build tools) -->
   <script src="js/config.js"></script>

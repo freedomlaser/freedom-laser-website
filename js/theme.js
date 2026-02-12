@@ -46,12 +46,12 @@
     const linkEl = document.getElementById("themeStylesheet");
     if (linkEl) linkEl.setAttribute("href", themeToHref[theme]);
 
-    // Handy for optional per-theme tweaks; not required for switching
     document.documentElement.dataset.theme = theme;
 
-    // Sync UI
-    const radio = document.querySelector(`input[name="theme"][value="${theme}"]`);
-    if (radio && !radio.checked) radio.checked = true;
+    // Sync all matching radios
+    document.querySelectorAll(`input[name="theme"][value="${theme}"]`).forEach((r) => {
+      if (!r.checked) r.checked = true;
+    });
 
     if (persist) safeSet(STORAGE_KEY, theme);
   }
@@ -73,4 +73,65 @@
 
     applyTheme(target.value, { persist: true });
   });
+
+  // Floating widget panel toggle
+  function initWidget() {
+    const toggle = document.querySelector(".theme-widget-toggle");
+    const panel = document.getElementById("theme-widget-panel");
+    if (!toggle || !panel) return;
+
+    function openPanel() {
+      panel.classList.add("is-open");
+      toggle.setAttribute("aria-expanded", "true");
+    }
+
+    function closePanel() {
+      panel.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+
+    toggle.addEventListener("click", () => {
+      const open = panel.classList.contains("is-open");
+      if (open) closePanel(); else openPanel();
+    });
+
+    // Escape closes panel
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && panel.classList.contains("is-open")) {
+        closePanel();
+        toggle.focus();
+      }
+    });
+
+    // Click outside closes panel
+    document.addEventListener("click", (e) => {
+      if (!panel.classList.contains("is-open")) return;
+      const widget = document.querySelector(".theme-widget");
+      if (widget && !widget.contains(e.target)) closePanel();
+    });
+  }
+
+  // Sticky header: transparent at top, solid on scroll
+  // Theme widget: hidden at top, visible on scroll
+  function initStickyHeader() {
+    const header = document.querySelector(".site-header");
+    const widget = document.querySelector(".theme-widget");
+    if (!header) return;
+
+    function update() {
+      const scrolled = window.scrollY > 40;
+      header.classList.toggle("is-scrolled", scrolled);
+      if (widget) widget.classList.toggle("is-visible", scrolled);
+    }
+
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => { initWidget(); initStickyHeader(); });
+  } else {
+    initWidget();
+    initStickyHeader();
+  }
 })();

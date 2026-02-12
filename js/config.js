@@ -10,11 +10,10 @@
 */
 
 window.SITE_CONFIG = {
-  phoneDisplay: "(705) 498-0894",
+  phoneDisplay: "705-498-0894",
   phoneE164: "+17054980894",
 
-  // Domain email placeholder (update after you set your domain)
-  email: "contact@YOURDOMAIN.ca",
+  email: "hello@freedom-laser.ca",
 
   // Address placeholder
   address: "[ADDRESS HERE]",
