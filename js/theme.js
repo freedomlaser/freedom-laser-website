@@ -12,7 +12,7 @@
 
 (() => {
   const STORAGE_KEY = "freedom_laser_theme";
-  const DEFAULT_THEME = "zip-modern";
+  const DEFAULT_THEME = "card";
 
   const themeToHref = {
     "zip-modern": "css/theme-zip-modern.css",
